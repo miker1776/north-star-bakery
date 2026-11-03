@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | North Star Bakery</title>
+<link href="css/main.css" rel="stylesheet"/></head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header>
+<img alt="North Star Bakery" src="media/bakery-logo_c.png" width="180"/>
+<nav aria-label="Main navigation">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="about.html">About</a></li>
+<li><a aria-current="page" href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+<main id="main" tabindex="-1">
+<h1>Contact and preorder requests</h1>
+<p>Tell us what you have in mind. A request is not a confirmed order;
+      our team needs to confirm availability and the final price.</p>
+<p>This class project form demonstrates HTML validation only.
+      It does not send an order to a bakery.</p>
+
+
+<div class="contact-layout"><section aria-labelledby="request">
+<h2 id="request">Send a request</h2>
+<p>Fields marked required must be completed. For a general question,
+        leave the pickup date blank.</p>
+<form action="contact.html" method="get">
+<fieldset>
+<legend>Your contact information</legend>
+<p>
+<label for="name">Name (required)</label>
+<input autocomplete="name" id="name" maxlength="80" minlength="2" name="name" required="" type="text"/>
+</p>
+<p>
+<label for="email">Email (required)</label>
+<input autocomplete="email" id="email" maxlength="120" name="email" required="" type="email"/>
+</p>
+</fieldset>
+<fieldset>
+<legend>Your request</legend>
+<p>
+<label for="request-type">Request type (required)</label>
+<select id="request-type" name="request-type" required="">
+<option value="">Choose a request type</option>
+<option value="preorder">Preorder</option>
+<option value="question">General question</option>
+</select>
+</p>
+<p>
+<label for="pickup">Preferred pickup date</label>
+<input aria-describedby="pickup-help" id="pickup" name="pickup" type="date"/>
+</p>
+<p id="pickup-help">For preorders, choose a Tuesday through
+            Saturday. Allow two days for bread and pastries or one week
+            for cakes. We will confirm your date by email.</p>
+<p>
+<label for="details">Item details or question (required)</label>
+<textarea cols="40" id="details" maxlength="1000" minlength="10" name="details" required="" rows="5"></textarea>
+</p>
+<p>
+<label for="allergies">Allergy notes (optional)</label>
+<textarea aria-describedby="allergy-help" cols="40" id="allergies" maxlength="500" name="allergies" rows="3"></textarea>
+</p>
+<p id="allergy-help">Tell us about any allergies before ordering.
+            Our shared kitchen handles wheat, milk, eggs, and nuts.
+            We cannot promise an allergen-free product.</p>
+</fieldset>
+<button type="submit">Check request form</button>
+</form>
+</section><section aria-labelledby="location">
+<h2 id="location">Location and hours</h2>
+<address>North Star Bakery<br/>
+        123 Main Street<br/>Your Town (sample address)</address>
+<p>Tuesday through Saturday: 7 a.m. to 3 p.m.<br/>
+        Sunday and Monday: closed.</p>
+</section></div></main>
+<footer>
+<p>© 2026 North Star Bakery</p>
+<p>Tuesday through Saturday, 7 a.m. to 3 p.m.</p>
+<p>123 Main Street, Your Town (sample address)</p>
+</footer>
+</body>
+</html>
