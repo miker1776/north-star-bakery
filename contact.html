@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Contact | North Star Bakery</title>
-<link href="css/main.css" rel="stylesheet"/></head>
+<link href="css/main.css" rel="stylesheet"/><script src="js/preorder.js" defer></script></head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 <header>
@@ -23,15 +23,25 @@
 <h1>Contact and preorder requests</h1>
 <p>Tell us what you have in mind. A request is not a confirmed order;
       our team needs to confirm availability and the final price.</p>
-<p>This class project form demonstrates HTML validation only.
+<p>This class project form checks your request in this browser only.
       It does not send an order to a bakery.</p>
 
 
+<section id="estimate" aria-labelledby="estimate-title">
+<h2 id="estimate-title">Plan your preorder</h2>
+<p>Choose an item and quantity for a sample estimate. Availability and final prices require bakery confirmation.</p>
+<div class="estimate-controls">
+<p><label for="product">Bakery item</label><select id="product"></select></p>
+<p><label for="quantity">Quantity (1–50)</label><input id="quantity" type="number" min="1" max="50" step="1" value="1" aria-describedby="quantity-error"/><span id="quantity-error" class="field-error"></span></p>
+</div>
+<p id="estimate-result" role="status" aria-live="polite"></p>
+<p id="estimate-storage" role="status"></p>
+</section>
 <div class="contact-layout"><section aria-labelledby="request">
 <h2 id="request">Send a request</h2>
 <p>Fields marked required must be completed. For a general question,
         leave the pickup date blank.</p>
-<form action="contact.html" method="get">
+<form id="request-form" action="contact.html" method="get">
 <fieldset>
 <legend>Your contact information</legend>
 <p>
@@ -72,7 +82,12 @@
             Our shared kitchen handles wheat, milk, eggs, and nuts.
             We cannot promise an allergen-free product.</p>
 </fieldset>
+<p><label class="check-label"><input id="remember-draft" type="checkbox"/> Remember my request draft on this device</label></p>
+<p>Only save a draft on a device you trust. Drafts include your contact information and notes.</p>
+<p id="draft-status" role="status"></p>
 <button type="submit">Check request form</button>
+<button id="clear-draft" type="button">Clear saved draft</button>
+<p id="form-status" role="status" aria-live="polite"></p>
 </form>
 </section><section aria-labelledby="location">
 <h2 id="location">Location and hours</h2>

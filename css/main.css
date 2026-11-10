@@ -59,3 +59,14 @@ footer p { margin-bottom: .4rem; font-size: .9rem; }
  .contact-layout > section:last-child { flex: 1; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
+
+/* Touchstone 4: use the existing palette and type. */
+.estimate-controls { display:flex; flex-wrap:wrap; gap:1.5rem; max-width:700px; }
+.estimate-controls > p { flex:1 1 220px; }
+#estimate-result { font-weight:bold; font-size:1.2rem; }
+.field-error { display:block; font-weight:bold; margin-top:.35rem; }
+[aria-invalid="true"] { border:3px solid var(--brown); }
+.check-label { display:flex; align-items:center; gap:.75rem; }
+.check-label input { width:24px; min-height:24px; flex-shrink:0; }
+#clear-draft { margin:.75rem 0; }
+#form-status, #draft-status, #estimate-storage { margin-top:.75rem; }
